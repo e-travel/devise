@@ -220,6 +220,11 @@ module Devise
   mattr_accessor :sign_out_via
   @@sign_out_via = :get
 
+  # Set the omniauth path prefix so it can be overriden when
+  # Devise is used in a mountable engine
+  mattr_accessor :omniauth_path_prefix
+  @@omniauth_path_prefix = nil
+
   # PRIVATE CONFIGURATION
 
   # Store scopes mappings.
